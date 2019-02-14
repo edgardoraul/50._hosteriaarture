@@ -1,0 +1,52 @@
+// Tables
+.table
+	font-size 13px
+	width 100%
+
+	thead
+		border-left 1px solid gris_concreto
+		border-right 1px solid gris_concreto
+		font-family 'DroidSerifRegular'
+		font-weight lighter
+
+		th
+			background gris_concreto
+			border-left 1px solid blanco_normal
+			color #fff
+			margin 1px
+			padding 0.5em 0.2em
+			text-shadow(none)
+		
+		th:first-child
+			border-left none
+		
+		th[colspan="2"]
+		th[colspan="3"]
+		th[colspan="4"]
+		th[colspan="5"]
+		th[colspan="6"]
+			border-bottom 1px solid blanco_normal		
+			
+	tbody
+		tr
+			td
+				padding 0.5em
+				border 1px solid gris_concreto
+		
+			&:nth-child(even)
+				background gris_claro
+				
+			&:hover
+				background gris_nube
+					
+			td[colspan="2"]
+			td[colspan="3"]
+			td[colspan="4"]
+			td[colspan="5"]
+			td[colspan="6"]
+				text-align left
+
+
+@media only screen and (min-width: 420px)
+	.table
+		font-size 18px

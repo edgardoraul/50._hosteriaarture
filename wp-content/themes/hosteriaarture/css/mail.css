@@ -1,0 +1,141 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+/* Etiquetas y selectores */
+a
+{
+	color: #23BEED;
+	text-decoration: none;
+}
+a:hover, a:focus, a:active
+{
+	color: #C8502B;
+	text-decoration: underline;
+}
+body
+{
+	background-color: #EBECE8;
+	color: #555;
+	font-family: Tahoma, Geneva, sans-serif; 
+	font-size: 16px;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, table, tr, td
+{
+	font-family: "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: lighter;
+}
+hr
+{
+	color: #615C36; 
+	text-align: center; 
+	width: 95%;
+}
+table
+{
+	border-collapse: collapse;
+	background: white;
+}
+
+/* Clases para formato de tablas y párrafos */
+.centrador
+{
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+.destacado
+{
+	color: #976B3B;
+	text-transform: uppercase;
+}
+.parrafo-comun
+{
+	padding: 1em;
+}
+.right, .right a
+{
+	text-align: right;
+}
+
+/*Los identificadores*/
+#bottom-fondo
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	color: #fff;
+	text-align: center;
+}
+#bottom-left
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	width: 2px;
+}
+#bottom-right
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	width: 2px;
+}
+#footer
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	height: 180px;
+	max-width: 800px;
+}
+#footer-bottom
+{
+	height: 180px;
+	width: 100%;
+}
+#header
+{
+	background: #C9A55C;
+	height: 151px;
+	max-width: 800px;
+}
+#header-logo
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	height: 151px;
+	width: 100%;
+}
+#leftside
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	width: 2px;
+}
+#logo
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/logo6.jpg') top left no-repeat;
+	width: 191px;
+}
+#logo-fondo
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	color: #fff;
+	max-width: 455px;
+	text-align: center;
+}
+#main
+{
+	margin: auto 0;
+	max-width: 754px;
+}
+#rightside
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	width: 2px;
+}
+#top-right
+{
+	background: #C9A55C url('http://www.webmoderna.com.ar/hosteriaarture/wp-content/themes/hosteriaarture/img/textura.png');
+	width: 2px;
+}
+#wrapper
+{
+	margin: 0 auto;
+	max-width: 800px;
+	min-width: 295px;
+}

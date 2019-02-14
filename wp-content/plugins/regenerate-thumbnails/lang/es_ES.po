@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Regenerate Thumbnails\n"
+"POT-Creation-Date: 2014-12-17 10:38-0300\n"
+"PO-Revision-Date: 2014-12-17 10:57-0300\n"
+"Last-Translator: Edgardo Raúl Galletto | WebModerna <info@webmoderna.com."
+"ar>\n"
+"Language-Team: ...:: WebModerna | el futuro de la web ::... <info@webmoderna."
+"com.ar>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../regenerate-thumbnails.php:56 ../regenerate-thumbnails.php:81
+#: ../regenerate-thumbnails.php:95 ../regenerate-thumbnails.php:112
+#: ../regenerate-thumbnails.php:146
+msgid "Regenerate Thumbnails"
+msgstr "Regenerar los tamaños de Imágenes"
+
+#: ../regenerate-thumbnails.php:56
+msgid "Regen. Thumbnails"
+msgstr "Regenerar los tamaños de Imágenes"
+
+#: ../regenerate-thumbnails.php:81
+msgid "Regenerate the thumbnails for this single image"
+msgstr "Regenerar los tamaños de imégenes solo para esta imagen"
+
+#: ../regenerate-thumbnails.php:154
+msgid "Cheatin&#8217; uh?"
+msgstr "Con que haciendo trampoas&#8217; eh?"
+
+#: ../regenerate-thumbnails.php:168
+#, php-format
+msgid "Unable to find any images. Are you sure <a href='%s'>some exist</a>?"
+msgstr ""
+"Imposible encontrar una sola imagen. Estás seguro de que <a href='%s'>exista "
+"alguna</a>?"
+
+#: ../regenerate-thumbnails.php:179
+msgid ""
+"Please be patient while the thumbnails are regenerated. This can take a "
+"while if your server is slow (inexpensive hosting) or if you have many "
+"images. Do not navigate away from this page until this script is done or the "
+"thumbnails will not be resized. You will be notified via this page when the "
+"regenerating is completed."
+msgstr ""
+"Se paciente mientras las miniaturas son regeneradas. Puede tomar un tiempo "
+"si tu servidor es lento (alojamiento web barato; puajjj!!) o si tienes "
+"muchas imágenes. No salgas de esta página hasta que el proceso se complete, "
+"o algunas imágenes no se redimensionarán.  Se te avisará cuando el proceso "
+"de regeneración/redimensionamiento esté completo."
+
+#: ../regenerate-thumbnails.php:183
+#, php-format
+msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
+msgstr "Para volver a la página anterior, <a href=\"%s\">haz click aquí</a>."
+
+#: ../regenerate-thumbnails.php:184
+#, php-format
+msgid ""
+"All done! %1$s image(s) were successfully resized in %2$s seconds and there "
+"were %3$s failure(s). To try regenerating the failed images again, <a href="
+"\"%4$s\">click here</a>. %5$s"
+msgstr ""
+"All done! %1$s image(s) were successfully resized in %2$s seconds and there "
+"were %3$s failure(s). To try regenerating the failed images again, <a href="
+"\"%4$s\">click here</a>. %5$s"
+
+#: ../regenerate-thumbnails.php:185
+#, php-format
+msgid ""
+"All done! %1$s image(s) were successfully resized in %2$s seconds and there "
+"were 0 failures. %3$s"
+msgstr ""
+"Listo! %1$s imagen(imágenes) fueron redimensionadas exitosamente en %2$s "
+"segundos y no hubo ninguna falla. %3$s"
+
+#: ../regenerate-thumbnails.php:189 ../regenerate-thumbnails.php:338
+msgid "You must enable Javascript in order to proceed!"
+msgstr "Tienes que habilitar JavaScript para que esto funcione!"
+
+#: ../regenerate-thumbnails.php:195
+msgid "Abort Resizing Images"
+msgstr "Abortar el Redimensionamiento de imágenes"
+
+#: ../regenerate-thumbnails.php:197
+msgid "Debugging Information"
+msgstr "Información para Depurar"
+
+#: ../regenerate-thumbnails.php:200
+#, php-format
+msgid "Total Images: %s"
+msgstr "Total de imágenes: %s"
+
+#: ../regenerate-thumbnails.php:201
+#, php-format
+msgid "Images Resized: %s"
+msgstr "Imágenes Redimensionadas: %s"
+
+#: ../regenerate-thumbnails.php:202
+#, php-format
+msgid "Resize Failures: %s"
+msgstr "Redimensiones Fallidas: %s"
+
+#: ../regenerate-thumbnails.php:233
+msgid "Stopping..."
+msgstr "Deteniendo..."
+
+#: ../regenerate-thumbnails.php:285
+#, php-format
+msgid ""
+"The resize request was abnormally terminated (ID %s). This is likely due to "
+"the image exceeding available memory or some other type of fatal error."
+msgstr ""
+"El redimensionamiento fue anormalmente terminado (ID %s). Es como si la "
+"imagen exediera la memoria disponible o algún otro tipo de error fatal "
+"hubiera sucedido."
+
+#: ../regenerate-thumbnails.php:328
+#, php-format
+msgid ""
+"Use this tool to regenerate thumbnails for all images that you have uploaded "
+"to your blog. This is useful if you've changed any of the thumbnail "
+"dimensions on the <a href='%s'>media settings page</a>. Old thumbnails will "
+"be kept to avoid any broken images due to hard-coded URLs."
+msgstr ""
+"Usa esta herramienta para regenerar los tamaños de imágenes para todas las "
+"imágenes que subiste a tu blog. Es útil si tu has cambiado las dimensiones "
+"de una miniatura en <a href='%s'>página de configuraciones Medios</a>. Las "
+"miniaturas antiguas se mantendrán para evitar imágenes dañadas debido a las "
+"URL's no modificables."
+
+#: ../regenerate-thumbnails.php:330
+#, php-format
+msgid ""
+"You can regenerate specific images (rather than all images) from the <a "
+"href='%s'>Media</a> page. Hover over an image's row and click the link to "
+"resize just that one image or use the checkboxes and the &quot;Bulk "
+"Actions&quot; dropdown to resize multiple images (WordPress 3.1+ only)."
+msgstr ""
+"Puedes regenerar imágenes específicas (así como todas) desde el menú de "
+"herramientas <a href='%s'>Medios</a>. Cuando pases el ratón por encima de la "
+"fila de una imagen; y hagas click en el enlace para redimensionar solo una "
+"imagen; o uses las cajas de selección y selecciones en el menú de &quot;"
+"Acciones en Lote&quot; redimensionar múltiples imágenes (WordPress 3.1+ "
+"solamente)."
+
+#: ../regenerate-thumbnails.php:332
+msgid ""
+"Thumbnail regeneration is not reversible, but you can just change your "
+"thumbnail dimensions back to the old values and click the button again if "
+"you don't like the results."
+msgstr ""
+"El proceso de regeneración es irreversible, pero puedes cambiar las "
+"dimensiones de los tamaños de las imágenes y volverlos a los valores "
+"antiguos; luego haz click en el botón de nuevo ni no te gustan como quedaron "
+"estas."
+
+#: ../regenerate-thumbnails.php:334
+msgid "To begin, just press the button below."
+msgstr "Para comenzar, solo presioná el botón a continuación."
+
+#: ../regenerate-thumbnails.php:336
+msgid "Regenerate All Thumbnails"
+msgstr "Redimensionar todas las imágenes"
+
+#: ../regenerate-thumbnails.php:360
+#, php-format
+msgid "Failed resize: %s is an invalid image ID."
+msgstr "Redimensionamiento fallido: %s es un ID inválido de imagen."
+
+#: ../regenerate-thumbnails.php:363
+msgid "Your user account doesn't have permission to resize images"
+msgstr "Tu cuenta de usuario no tiene permisos para redimensionar las imágenes"
+
+#: ../regenerate-thumbnails.php:368
+#, php-format
+msgid "The originally uploaded image file cannot be found at %s"
+msgstr ""
+"El archivo de la imagen originalmente subida no se puede encontrar en %s"
+
+#: ../regenerate-thumbnails.php:377
+msgid "Unknown failure reason."
+msgstr "Origen de falla desconocido."
+
+#: ../regenerate-thumbnails.php:382
+#, php-format
+msgid "&quot;%1$s&quot; (ID %2$s) was successfully resized in %3$s seconds."
+msgstr ""
+"&quot;%1$s&quot; (ID %2$s) fueron redimensionadas exitosmente en %3$s "
+"segundos."
+
+#: ../regenerate-thumbnails.php:388
+#, php-format
+msgid ""
+"&quot;%1$s&quot; (ID %2$s) failed to resize. The error message was: %3$s"
+msgstr ""
+"&quot;%1$s&quot; (ID %2$s) fallaron en el redimensionamiento. El mensaje de "
+"error fue: %3$s"

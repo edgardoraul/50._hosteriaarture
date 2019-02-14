@@ -1,0 +1,6 @@
+.contenido
+{
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfd1c6',GradientType=0 );
+}

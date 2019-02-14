@@ -1,0 +1,582 @@
+/*
+Usuario: admin
+Pass:
+1- alvlgeddl
+2- admin
+3- tomenague
+
+
+*/
+/*Etiquetas*/
+body
+	background rgb(255,255,255)
+	background -moz-linear-gradient(top, rgba(255,255,255,1) 49%, rgba(207,209,198,1) 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(49%,rgba(255,255,255,1)), color-stop(100%,rgba(207,209,198,1)))
+	background -webkit-linear-gradient(top, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%)
+	background -o-linear-gradient(top, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%)
+	background -ms-linear-gradient(top, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%)
+	background linear-gradient(to bottom, rgba(255,255,255,1) 49%,rgba(207,209,198,1) 100%)
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfd1c6',GradientType=0 )")
+	color #555
+	font-family 'DosisRegular'
+	font-weight normal
+	font-size 18px
+	text-align center
+
+
+a
+	color azul_twitter
+	transition(all 0.3s ease-in-out)
+
+	&:hover
+	&:focus
+		color rojo_google
+
+
+footer
+	font-size 16px
+
+	a
+		text-decoration none
+
+
+footer, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	font-family 'DroidSerifRegular', sans-serif
+
+
+header
+	background-color #c9a55c
+	background-image url('../img/textura.png')
+	background-color -moz-linear-gradient(top, #c9a55c 0%, #9a7e46 100%) 
+	background-color -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9a55c), color-stop(100%,#9a7e46))
+	background-color -webkit-linear-gradient(top, #c9a55c 0%,#9a7e46 100%)
+	background-color -o-linear-gradient(top, #c9a55c 0%,#9a7e46 100%)
+	background-color -ms-linear-gradient(top, #c9a55c 0%,#9a7e46 100%)
+	background-color linear-gradient(to bottom, #c9a55c 0%,#9a7e46 100%)
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9a55c', endColorstr='#9a7e46',GradientType=0 )")
+	border-radius(4px 4px 0 0)
+	/*box-shadow(inset 0 0 80px 15px negro_re_transparente)*/
+	box-shadow_lindo()
+	height auto
+	position relative
+	text-align left
+
+nav
+	padding 0
+	margin 0
+
+
+textarea
+	border 1px solid gris_claro
+	border-radius (5px)
+	color gris_texto
+	display block
+	overflow auto
+	padding 0.5em
+	margin 0.5em auto
+	transition(all 0.3s ease-in-out)
+	width 95%
+
+	&:hover
+	&:focus
+		border 1px solid azul_twitter
+		box-shadow( 0px 1px 1px rgba(0, 0, 0, 0.075) inset unquote(",") 0px 0px 8px rgba(102, 175, 233, 0.6))
+
+/* Los id's */
+.main_nav
+	height 0
+	margin 0
+	opacity 0
+	padding 0
+	text-align left
+	visibility hidden
+	width 100%
+
+	li
+		list-style none
+
+		a
+			color #fff
+			display block
+			font-size 1em
+			padding 0.6em 1em
+			text-decoration none
+			text-transform uppercase
+			text-shadow_lindo()
+
+			&:hover, &:focus, &:active
+				background rgba(0,0,0,0.3)
+				border-radius(4px)
+
+	.current-menu-item
+	.current_page_item
+		a
+			background rgba(0,0,0,0.5)
+			border-radius(4px)
+
+.main_nav-abrir
+	height auto
+	opacity 1
+	visibility visible
+
+.main_nav-cerrar
+	height 0
+	opacity 0
+	visibility hidden
+
+#menu
+	background transparent !important
+	border 1px solid blanco_grisaceo
+	box-shadow( 1px 1px 1px negro)
+	height 40px
+	float right
+	margin 0.5em
+	padding 0 0.1em
+	width 50px
+
+	&:hover, &:focus
+		background negro_transparente !important
+
+	&:active
+		box-shadow(none)
+
+	span
+		background blanco
+		border 2px solid #fff
+		border-radius(2px)
+		box-shadow(0px 0px 0px negro_transparente)
+		display block
+		margin 5px auto
+		padding 0
+		width 60%
+
+
+#ir_arriba
+#ir_arriba_phone
+	border-radius(5px)
+	bottom 0.2em
+	display inline-block
+	font-size 40px
+	padding 0
+	position fixed
+	right 0.2em
+	text-decoration none
+	transition all 0.3s ease-in-out
+	z-index 31
+
+	img
+		height 32px
+		margin -0.2em 0.3em 0.1em 0.3em
+		padding 0
+		width 32px
+
+
+#ir_arriba
+	background rgba(232, 100, 90, 0.2)
+	// opacity 0
+	// visibility hidden
+
+
+#ir_arriba:focus
+#ir_arriba_phone:focus
+	background rgba(232, 100, 90, 0.7)
+
+
+#ir_arriba:hover
+#ir_arriba_phone:hover
+	background rgba(232, 100, 90, 1)
+	box-shadow_lindo()
+
+
+#logo
+	display inline-block
+	margin auto auto auto 0
+
+	figure
+		padding 0
+		margin 0.7em 0.5em 0.5em 0.5em
+		a
+			img
+				border-radius(5px)
+				width 50px
+
+
+/* las clases =========================*/
+.clearfix
+	clear both
+
+
+.center
+	text-align center
+
+
+.contenido
+	p, ul
+		text-align left
+
+	ul
+		margin 0
+		padding-left 1em
+
+
+.contenido, .formulario, .galeria, .tarifas
+	overflow hidden
+	padding 0.5em
+
+
+.creditos
+	border-top 1px solid blanco
+
+
+.footer_nav
+	ul
+		li
+			display inline-block
+
+
+.galeria_2
+	margin 1em auto
+
+	div
+		background blanco_normal
+		border 1px solid gris_claro
+		border-radius(4px)
+		box-shadow_lindo()
+		display inline-block
+		margin 0
+		padding 4px 4px 0 4px
+		position relative
+		float none
+
+		&:after, &:before
+			box-shadow(0px 0px 6px 4px negro)
+			bottom 5px
+			content ""
+			display block
+			height 0
+			position absolute
+			width 43%
+
+		&:after
+			left 0.5em
+			transform( rotate(-3deg) )
+			z-index -1
+
+		&:before
+			right 0.5em
+			transform( rotate(3deg) )
+			z-index -1
+
+		figure
+			display inline-block
+			margin 0
+			padding 0
+			width 49%
+			vertical-align top
+
+			a
+				display inline-block
+
+				&:hover, &:focus
+					opacity 0.7
+
+				img
+					width 100%
+
+
+
+.header_address
+	display none
+	font-size 16px
+
+
+.header_tittle	
+	h1, h2
+		color gris_
+		display inline-block
+		font-size 1.1em
+		font-weight lighter
+		text-shadow_lindo()
+
+		span
+			border-left 1px solid gris_claro
+			color gris_texto
+			display inline-block
+			font-size 0.8em
+			margin-left 5px
+			padding-left 5px
+
+
+.header_title_inside
+	display none
+
+
+.imagen_item
+	background #fff
+	border 1px solid gris_claro
+	border-radius(5px)
+	padding 5px
+	position relative
+	max-width 600px
+	margin 1em 0
+	transition(all 0.3s ease-in-out)
+	vertical-align top
+
+	&:hover, &:focus
+		background gris_nube
+		box-shadow_lindo()
+		figcaption
+			text-shadow(0px 0px 1px #fff)
+	img
+		position relative
+		width 100%
+
+	figcaption
+		padding 0.5em
+
+	a
+		&:before, &:after
+			box-shadow(0px 0px 6px 4px negro)
+			bottom 5px
+			content ""
+			display block
+			height 0
+			position absolute
+			width 43%
+
+		&:after
+			left 0.5em
+			transform( rotate(-5deg) )
+			z-index -1
+
+		&:before
+			right 0.5em
+			transform( rotate(5deg) )
+			z-index -1
+
+
+.logo_brochero
+	overflow hidden
+
+	figure
+		float left
+		margin 1em auto 0 1em
+
+		img
+			width 152px
+
+
+.perspectiva
+	perspective(600px)
+
+
+.redessociales
+	border-bottom 1px solid gris_concreto
+
+	i.boton
+		font-size 23px
+		padding 0.3em 0.5em
+		text-shadow_lindo()
+
+
+.titular_estilo_mesa
+	background: #fff;
+	background: -moz-linear-gradient(top, #ffffff 30%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#ffffff), color-stop(100%,#eeeeee));
+	background: -webkit-linear-gradient(top, #ffffff 30%,#eeeeee 100%);
+	background: -o-linear-gradient(top, #ffffff 30%,#eeeeee 100%);
+	background: -ms-linear-gradient(top, #ffffff 30%,#eeeeee 100%);
+	background: linear-gradient(to bottom, #ffffff 30%,#eeeeee 100%);
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 )");
+	border-bottom 4px solid rgba(0,0,0,0.5)
+	border-radius( 0 0 9px 9px)
+	color #836b3b
+	display inline-block
+	font-size 1.5em
+	font-weight lighter
+	margin 0 auto 0.5em auto
+	padding 0.2em 1em
+	position relative
+	text-align center
+	transform(rotateX(18deg))
+
+	&:after
+	&:before
+		border 8px solid transparent
+		border-top-color negro_transparente
+		bottom -20px
+		content ""
+		position absolute
+
+	&:after
+		right 23px
+
+	&:before
+		left 23px
+
+
+@media only screen and (min-width: 420px)
+	.galeria_2
+		div
+			figure
+				width 32.5%
+
+
+@media only screen and (min-width: 490px)
+	.imagen_item
+		display inline-block
+		width 250px
+
+@media only screen and (min-width: 590px)
+	.galeria_2
+		display block
+		width 570px
+
+		div
+			display block
+			figure
+				width 180px
+
+@media only screen and (min-width: 720px)
+	.columna-2
+		column-count(2)
+		column-gap(4em)
+		column-rule(2px inset gris_claro)
+		padding 3em
+
+
+	.galeria
+		padding 1em
+
+
+
+	.formulario, .tarifas
+		display inline-block
+		width 45%
+		vertical-align top
+
+
+	.formulario
+		margin-right 1em
+
+
+	.imagen_item
+		display inline-block
+		margin 0.5em
+		width 250px
+
+	.tarifas
+		.table
+			margin-top 0.5em
+
+
+@media only screen and (min-width: 1100px)
+	header
+		overflow hidden
+		position fixed
+		text-align left
+		top 0
+		left 0
+		width 100%
+		z-index 321
+
+		.header_tittle
+			position static
+
+			h1, h2
+				display block
+
+	nav
+		display inline-block
+		float none
+		margin 0.4em 0.4em 0 10em
+		transition(all 0.5s ease-in-out)
+
+
+	section
+		margin-top 8em
+
+
+	.main_nav
+		display inline-block
+		height auto
+		opacity 1
+		visibility visible
+		transition(all 0.5s ease-in-out)
+
+		li
+			display inline-block
+
+	#logo
+		display inline-block
+		margin-top 0em
+		padding 0
+		position absolute
+		left 1em
+		top 0.5em
+		transition(all 0.5s ease-in-out)
+
+		figure
+			margin 0
+			padding 0
+			a
+				display block
+				margin 0
+				padding 0
+
+				img
+					box-shadow(0px 0px 5px negro_transparente)
+					margin 0
+					padding 0
+					width 150px
+
+	#menu
+		display none
+
+	.header_address
+		color blanco_grisaceo
+		display inline-block
+		font-family 'DroidSerifRegular'
+		margin-right 0.5em
+		position absolute
+		right 0.5em
+		text-align right
+		top 0.5em
+
+		ul
+			padding 0
+			margin 0
+
+			li
+				list-style none
+
+		figure
+			img
+				width 152px
+
+	.header_tittle
+		display none
+
+	.header_title_inside
+		display inline-block
+		margin 0 auto 0 10em
+		transition(all 0.5s ease-in-out)
+		width auto
+
+		h1, h2
+			display inline-block
+			color #fff
+			font-size 2em
+			font-weight lighter
+			text-shadow_lindo()
+
+			span
+				border-left 1px solid gris_claro
+				display inline-block
+				font-size 0.5em
+				padding-left 0.5em
+
+@media only screen and (min-width: 1150px)
+
+	.galeria_2
+		width 1120px

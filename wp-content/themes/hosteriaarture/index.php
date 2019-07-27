@@ -1,2 +1,2 @@
 <?php
-echo "silencio es titanium";
+// "silencio es titanium";

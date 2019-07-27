@@ -26,5 +26,6 @@ wp-content/languages
 wp-content/uploads/wpcf7_captcha
 maqueta-*/
 wp-*.php
+xml*.php
 *.txt
 

@@ -1,5 +1,5 @@
 *.log
-# wp-config.php
+wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
@@ -10,7 +10,7 @@ wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
-# /.htaccess
+.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
@@ -20,10 +20,11 @@ wp-content/plugins/hello.php
 *.zip
 *.txt
 wp-admin
+wp-content/plugins
 wp-includes
 wp-content/languages
 wp-content/uploads/wpcf7_captcha
 maqueta-*/
-*.php
+wp-*.php
 *.txt
 

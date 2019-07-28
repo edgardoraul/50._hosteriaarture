@@ -21,11 +21,11 @@
 				$twitter_contact = of_get_option('twitter_contact','');
 				if($facebook_contact != null)
 				{
-					echo '<a title="Facebook" target="_blank" href="http://' . $facebook_contact . '"><i class="boton blue icon-facebook"></i></a>';
+					echo '<a title="Facebook" target="_blank" href="//' . $facebook_contact . '"><i class="boton blue icon-facebook"></i></a>';
 				}
 				if($twitter_contact != null)
 				{
-					echo ' <a title="Twitter" target="_blank" href="http://' . $twitter_contact . '"><i class="boton skyblue icon-twitter"></i></a>';
+					echo ' <a title="Twitter" target="_blank" href="//' . $twitter_contact . '"><i class="boton skyblue icon-twitter"></i></a>';
 				}
 				?>
 				<a href="<?php bloginfo('url');?>/contacto-tarifas/" title="Contacto">
@@ -67,7 +67,6 @@
 <?php if(is_page( 'contacto-tarifas' )) { //Solo se cargará en la página del formulario ?>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/datepicker-completo.js"></script>
 <?php };
-wp_footer();
 /*
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -80,6 +79,9 @@ $google_analitycs = of_get_option('google_analitycs', '');
 if ( $google_analitycs != null )
 {
 	echo '<script type="text/javascript">'.$google_analitycs.'</script>';
-};?>
+}
+
+wp_footer();
+?>
 </body>
 </html>

@@ -184,7 +184,7 @@ add_filter('script_loader_src', 'remove_script_version', 15, 1);
 remove_filter('comment_text', 'make_clickable', 9);
 
 
-// Agregando un favion al área de administración
+// Agregando un favicón al área de administración
 function admin_favicon()
 {
 	echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_bloginfo('stylesheet_directory').'/favicon.ico" />';
@@ -282,7 +282,8 @@ if ( function_exists( 'get_custom_field_value' ) ) get_custom_field_value( 'feat
 
 
 // Habilitar la compresión de imágenes
-add_filter('jpeg_quality', create_function('','return 48;'));
+//add_filter('jpeg_quality', create_function('','return 48;'));
+add_filter('jpeg_quality', function($arg){return 50;});
 
 
 //Registrar las menúes de navegación
@@ -584,8 +585,8 @@ function relative_url()
       'get_template_directory_uri',//
       'template_directory_uri',//
       'get_locale_stylesheet_uri',
-      'script_loader_src', // plugin scripts url
-      'style_loader_src', // plugin styles url
+      //'script_loader_src', // plugin scripts url
+      //'style_loader_src', // plugin styles url
       'get_theme_root_uri',
       // Comento para omitir error en Depuración en WordPress
     );
@@ -718,13 +719,16 @@ function prefix_remove_dashboard_item()
 	// remove_menu_page( 'tools.php' );					//Tools
 	// remove_menu_page( 'options-general.php' );			//Settings
 };
-
+*/
 
 // Quitar cajas del escritorio
 function quita_cajas_escritorio()
 {
 	if( current_user_can('manage_options'))
 	{
+		
+		remove_action('welcome_panel', 'wp_welcome_panel'); // Bienvenida
+		remove_meta_box('dashboard_activity', 'dashboard', 'normal' ); // Actividad
 		remove_meta_box('dashboard_right_now', 'dashboard', 'normal');   // Ahora mismo
 		remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // Comentarios recientes
 		remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');  // Enlaces entrantes
@@ -745,7 +749,7 @@ function quita_cajas_escritorio()
 	}
 }
 add_action('wp_dashboard_setup', 'quita_cajas_escritorio' );
-*/
+
 
 // El mapa de sitio para Google
 add_action("publish_post", "eg_create_sitemap");

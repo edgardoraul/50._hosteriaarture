@@ -32,7 +32,7 @@ if (is_admin() && ! function_exists( 'optionsframework_init' ) ) :
 function optionsframework_init() {
 
 	//  If user can't edit theme options, exit
-	if ( ! current_user_can( 'edit_theme_options' ) ) {
+	if ( ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
 

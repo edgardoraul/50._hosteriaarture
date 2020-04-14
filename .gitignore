@@ -29,4 +29,6 @@ wp-*.php
 xml*.php
 *.txt
 *.pdf
+*.html
+datos
 

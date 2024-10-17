@@ -5,7 +5,7 @@
 * @since Hostería Arture 1.0
 */
 
-/* Cargar Panle de Opciones
+/* Cargar Panel de Opciones
 /*-----------------------------------------*/
 if ( !function_exists( 'optionsframework_init' ) )
 {
@@ -13,9 +13,9 @@ if ( !function_exists( 'optionsframework_init' ) )
 	require_once dirname( __FILE__ ) . '/includes/options-framework.php';
 }
 
-// Deshabilitar Iconos Emoji
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('wp_print_styles', 'print_emoji_styles');
+// Desactiva cosas innecesarias
+require_once dirname( __FILE__ ) . '/includes/desactivador.php';
+
 
 // Esto es algo para el formulario de contacto y esas yerbas.
 function get_site_emailId()
@@ -37,48 +37,6 @@ function get_site_emailName()
 	return stripslashes(get_option('blogname'));
 }
 
-require_once "includes/wp-mobile-detect.php";
-
-// Remover embebidos
-function disable_embeds_code_init() {
-
- // Remove the REST API endpoint.
- remove_action( 'rest_api_init', 'wp_oembed_register_route' );
-
- // Turn off oEmbed auto discovery.
- add_filter( 'embed_oembed_discover', '__return_false' );
-
- // Don't filter oEmbed results.
- remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
-
- // Remove oEmbed discovery links.
- remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-
- // Remove oEmbed-specific JavaScript from the front-end and back-end.
- remove_action( 'wp_head', 'wp_oembed_add_host_js' );
- add_filter( 'tiny_mce_plugins', 'disable_embeds_tiny_mce_plugin' );
-
- // Remove all embeds rewrite rules.
- add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-
- // Remove filter of the oEmbed result before any HTTP requests are made.
- remove_filter( 'pre_oembed_result', 'wp_filter_pre_oembed_result', 10 );
-}
-
-add_action( 'init', 'disable_embeds_code_init', 9999 );
-
-function disable_embeds_tiny_mce_plugin($plugins) {
-    return array_diff($plugins, array('wpembed'));
-}
-
-function disable_embeds_rewrites($rules) {
-    foreach($rules as $rule => $rewrite) {
-        if(false !== strpos($rewrite, 'embed=true')) {
-            unset($rules[$rule]);
-        }
-    }
-    return $rules;
-}
 
 /* Agregar clases a los enlances de los posts next y back */
 function add_class_next_post_link($html)
@@ -115,7 +73,7 @@ function the_post_thumbnail_remove_class($output)
 add_filter('post_thumbnail_html', 'the_post_thumbnail_remove_class');
 
 
-//Remover atributos de ancho y alto de las imágenes insertadas
+// Remover atributos de ancho y alto de las imágenes insertadas
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to__ditor', 'remove_width_attribute', 10 );
 function remove_width_attribute( $html )
@@ -179,22 +137,7 @@ function cc_mime_types($mimes)
 add_filter('upload_mimes','cc_mime_types');
 
 
-// Deshabilitar la edición desde otros programas, el link corto y la versión del WP.
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wp_generator'); 
-remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'index_rel_link', 1);
-remove_action('wp_head', 'wlwmanifest_link'); 
-remove_action('wp_head', 'feed_links__xtra', 3);
-remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
-remove_action('wp_head', 'start_post_rel_link', 10, 0);
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-remove_action('wp_head', 'rel_canonical');
-
-
-//Remover clases e ids automáticos de los menúes
+// Remover clases e ids automáticos de los menúes
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
 add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
 add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
@@ -257,12 +200,8 @@ function extra_contact_info($contactmethods)
 add_filter('user_contactmethods','extra_contact_info');
 
 
-//Remover versión del WordPress
-function remove_wp_version() { return''; };
-add_filter('the_generator','remove_wp_version');
 
-
-//Eliminar el atributo rel="category tag".
+// Eliminar el atributo rel="category tag".
 function remove_category_list_rel($output)
 {
 	return str_replace(' rel="category tag"','',$output);
@@ -271,7 +210,7 @@ add_filter('wp_list_categories','remove_category_list_rel');
 add_filter('the_category','remove_category_list_rel');
 
 
-//Eliminar css y scripts de comentarios cuando no hagan falta
+// Eliminar css y scripts de comentarios cuando no hagan falta
 function clean_header()
 {
 	wp_deregister_script('comment-reply');
@@ -323,7 +262,6 @@ if ( function_exists( 'get_custom_field_value' ) ) get_custom_field_value( 'feat
 
 
 // Habilitar la compresión de imágenes
-//add_filter('jpeg_quality', create_function('','return 48;'));
 add_filter('jpeg_quality', function($arg){return 50;});
 
 
@@ -823,7 +761,7 @@ function eg_create_sitemap()
 }
 
 
-/*
+
 //Función para Minificar el HTML
 class WP_HTML_Compression
 {
@@ -945,6 +883,5 @@ function wp_html_compression_start()
 {
 	ob_start('wp_html_compression_finish');
 }
-add_action('get_header', 'wp_html_compression_start');
-*/
-?>
+// add_action('get_header', 'wp_html_compression_start');
+

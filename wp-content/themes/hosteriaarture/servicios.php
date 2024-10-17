@@ -4,7 +4,7 @@
 *
 * @package WordPress
 * @subpackage hosteriaarture
-* @since Hostería Arture 1.0
+* @since HosterÃ­a Arture 1.0
 */
 get_header();
 if (have_posts()) : while (have_posts()) : the_post();
@@ -24,8 +24,28 @@ if (have_posts()) : while (have_posts()) : the_post();
 			<div class="galeria_2">
 				<div>
 <?php // Desktops and Tablets
-if(wpmd_is_notphone())
-{
+	if(wp_is_mobile())
+	{
+		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
+		if ($attachID !== '')
+		{
+			foreach ($attachID as $item)
+			{
+				$imagen = wp_get_attachment_image_src($item,'custom-thumb-180-135');
+				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
+				$descripcion = get_post_field('post_content', $item);
+				echo '
+				<figure>
+					<img src="' . $imagen[0] . '"';
+				echo ' alt="' . $alt . '"';
+			echo ' />
+				</figure>';
+			};
+		};
+
+	} else {
+	
+	// Descktops
 	$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
 	if ($attachID !== '')
 	{
@@ -39,35 +59,10 @@ if(wpmd_is_notphone())
 			<figure>
 				<a title="'.$alt.'" href="'.$imagen_big[0].'" class="fancybox" data-fancybox-group="button">
 					<img src="' . $imagen[0] . '"';
-			//if (count($alt))
-			//{
 				echo ' alt="' . $alt . '"';
-			//}
 			echo ' />
 				</a>
 			</figure>';
-			};
-		};
-	}
-	else // Solo teléfonos
-	{
-		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
-		if ($attachID !== '')
-		{
-			foreach ($attachID as $item)
-			{
-				$imagen = wp_get_attachment_image_src($item,'custom-thumb-180-135');
-				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
-				$descripcion = get_post_field('post_content', $item);
-				echo '
-				<figure>
-					<img src="' . $imagen[0] . '"';
-			//if (count($alt))
-			//{
-				echo ' alt="' . $alt . '"';
-			//}
-			echo ' />
-				</figure>';
 			};
 		};
 	}

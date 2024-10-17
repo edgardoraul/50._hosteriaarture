@@ -49,7 +49,7 @@
 			</div>
 		</div>
 
-	<?php if(wpmd_is_phone()) { ?>
+	<?php if(wp_is_mobile()) { ?>
 		<a href="#" title="<?php _e('ir arriba', 'hosteriaarture');?>" id="ir_arriba_phone">
 	<?php } else { ?>
 		<a href="#" title="<?php _e('ir arriba', 'hosteriaarture');?>" id="ir_arriba">
@@ -67,19 +67,11 @@
 <?php if(is_page( 'contacto-tarifas' )) { //Solo se cargará en la página del formulario ?>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/datepicker-completo.js"></script>
 <?php };
-/*
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-26329184-2', 'auto');
-ga('send', 'pageview');
-*/
-$google_analitycs = of_get_option('google_analitycs', '');
-if ( $google_analitycs != null )
-{
-	echo '<script type="text/javascript">'.$google_analitycs.'</script>';
-}
+	$google_analitycs = of_get_option('google_analitycs', '');
+	if ( $google_analitycs != null )
+	{
+		echo '<script type="text/javascript">'.$google_analitycs.'</script>';
+	}
 
 wp_footer();
 ?>

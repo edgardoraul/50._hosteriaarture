@@ -27,29 +27,8 @@ if ( $query->have_posts() )
 ?>
 
 
-<?php // Teléfonos
-	if(wpmd_is_phone())
-	{
-		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
-		if ($attachID !== '')
-		{
-			foreach ($attachID as $item)
-			{
-				$imagen = wp_get_attachment_image_src($item,'custom-thumb-400-154');
-				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
-				$descripcion = get_post_field('post_content', $item);
-				echo '<img class="item" src="' . $imagen[0] . '"';
-				//if (count($alt))
-				//{
-					echo ' alt="' . $alt . '"';
-				//}
-				echo ' />';
-			};
-		};
-	};
-
-	// Tablet
-	if(wpmd_is_tablet())
+<?php // Teléfonos y tabletas
+if(wp_is_mobile())
 	{
 		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
 		if ($attachID !== '')
@@ -60,18 +39,14 @@ if ( $query->have_posts() )
 				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 				$descripcion = get_post_field('post_content', $item);
 				echo '<img class="item" src="' . $imagen[0] . '"';
-				//if (count($alt))
-				//{
-					echo ' alt="' . $alt . '"';
-				//}
+				echo ' alt="' . $alt . '"';
 				echo ' />';
 			};
 		};
-	};
 
-	// Desktop
-	if(wpmd_is_notdevice())
-	{
+	} else {
+		// Desktops
+
 		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
 		if ($attachID !== '')
 		{
@@ -81,10 +56,7 @@ if ( $query->have_posts() )
 				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 				$descripcion = get_post_field('post_content', $item);
 				echo '<img class="item" src="' . $imagen[0] . '"';
-				//if (count($alt))
-				//{
-					echo ' alt="' . $alt . '"';
-				//}
+				echo ' alt="' . $alt . '"';
 				echo ' />';
 			};
 		};
@@ -93,29 +65,8 @@ if ( $query->have_posts() )
 
 			<div id="navegation">
 
-<?php // Teléfonos
-	if(wpmd_is_phone())
-	{
-		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
-		if ($attachID !== '')
-		{
-			foreach ($attachID as $item)
-			{
-				$imagen = wp_get_attachment_image_src($item,'custom-thumb-400-154');
-				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
-				$descripcion = get_post_field('post_content', $item);
-				echo '<p class="selected"><a href="javascript:;"><span>';
-				//if (count($alt))
-				//{
-					echo $alt;
-				//}
-				echo '</span></a></p>';
-			};
-		};
-	};
-
-	// Tablet
-	if(wpmd_is_tablet())
+<?php // Teléfonos y tabletas
+	if(wp_is_mobile())
 	{
 		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
 		if ($attachID !== '')
@@ -126,18 +77,14 @@ if ( $query->have_posts() )
 				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 				$descripcion = get_post_field('post_content', $item);
 				echo '<p><a href="javascript:;"><span>';
-				//if (count($alt))
-				//{
-					echo $alt;
-				//}
+				echo $alt;
 				echo '</span></a></p>';
 			};
 		};
-	};
+	
+	} else {
+		// Desktops
 
-	// Desktop
-	if(wpmd_is_notdevice())
-	{
 		$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
 		if ($attachID !== '')
 		{
@@ -147,10 +94,7 @@ if ( $query->have_posts() )
 				$alt = get_post_meta($item, '_wp_attachment_image_alt', true);
 				$descripcion = get_post_field('post_content', $item);
 				echo '<p><a href="javascript:;"><span>';
-				//if (count($alt))
-				//{
-					echo $alt;
-				//}
+				echo $alt;
 				echo '</span></a></p>';
 			};
 		};

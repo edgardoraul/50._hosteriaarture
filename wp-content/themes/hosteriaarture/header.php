@@ -35,7 +35,7 @@ if($meta_keywords2 != null) { ?>
 	<meta name="keywords" content="<?php echo $meta_keywords2;?>" />
 <?php };?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory');?>/css/style.min.css">
-<?php if(wpmd_is_ios()) { //Los Favicones ?>
+<?php if(wp_is_mobile()) { //Los Favicones ?>
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo('stylesheet_directory');?>/img/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory');?>/img/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('stylesheet_directory');?>/img/apple-touch-icon-72x72.png" />
@@ -50,8 +50,8 @@ if($meta_keywords2 != null) { ?>
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-128.png" sizes="128x128" />
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="<?php //bloginfo('url');?>/favicon.ico" /> -->
-<?php if(wpmd_is_notdevice()) { ?>
+	<link rel="shortcut icon" type="image/x-icon" href="bloginfo('stylesheet_directory');?>/img/favicon.ico" />
+<?php if(!wp_is_mobile()) { ?>
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

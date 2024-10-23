@@ -78,3 +78,15 @@ add_action('after_setup_theme', 'remove_parent_svg_icons');
 remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+
+
+// Eliminar css inline
+add_action( 'wp_enqueue_scripts', 'mywptheme_child_deregister_styles', 20 );
+function mywptheme_child_deregister_styles() {
+    wp_dequeue_style( 'classic-theme-styles' );
+
+}
+add_action( 'wp_enqueue_scripts', 'remove_global_styles' );
+function remove_global_styles(){
+    wp_dequeue_style( 'global-styles' );
+}

@@ -1,4 +1,3 @@
-*.log
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
@@ -19,6 +18,17 @@ wp-content/plugins/hello.php
 *.rar
 *.zip
 *.txt
+*.log
+*.ini
+*.gz
+*.gzip
+*.7z
+*.iso
+*.bin
+*.tar
+.gitignore
+datitos.php
+
 wp-admin
 wp-content/plugins
 wp-includes

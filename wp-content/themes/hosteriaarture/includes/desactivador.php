@@ -90,3 +90,27 @@ add_action( 'wp_enqueue_scripts', 'remove_global_styles' );
 function remove_global_styles(){
     wp_dequeue_style( 'global-styles' );
 }
+
+
+// Cargar archivos contactf7 solo en páginas que tengan el formulario
+
+function rjs_lwp_contactform_css_js() {
+
+    global $post;
+
+    if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'contact-form-7') ) {
+
+        wp_enqueue_script('contact-form-7');
+
+         wp_enqueue_style('contact-form-7');
+
+    } else {
+
+        wp_dequeue_script( 'contact-form-7' );
+
+        wp_dequeue_style( 'contact-form-7' );
+
+    }
+
+}
+add_action( 'wp_head', 'rjs_lwp_contactform_css_js', 100 );
